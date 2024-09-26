@@ -1,0 +1,30 @@
+<h3 class="text-center">Detalhes Transação</h3>
+<div class="form-container d-flex justify-content-center">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input type="text" class="form-control text-center" id="id" [value]="transacao.id" readonly>
+    </div>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control text-center" id="nome" [value]="transacao.nome" readonly>
+    </div>
+    <div class="form-group">
+      <label for="nome">Tipo Transação</label>
+      <input type="text" class="form-control text-center" id="nome" [value]="transacao.tipoTransacao" readonly>
+    </div>
+    <div class="form-group">
+      <label for="valor">Valor</label>
+      <input type="text" class="form-control text-center" id="valor" [value]="transacao.valor" readonly>
+    </div>
+    <div class="form-group">
+      <label for="numeroConta">Número Conta</label>
+      <input type="text" class="form-control text-center" id="numeroConta" [value]="transacao.numeroConta" readonly>
+    </div>
+    <br/>
+    <button (click)="list()" class="btn btn-primary w-100">Voltar para Transações</button>
+  </div>
+</div>
+<br/>
+
+<app-footer></app-footer>

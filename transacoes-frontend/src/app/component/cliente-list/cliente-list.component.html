@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="container mt-3">
+
+  <table class="table table-secondary table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Email</th>
+        <th>Número Conta</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cli of clientes">
+        <td>{{cli.id}}</td>
+        <td>{{cli.nome}}</td>
+        <td>{{cli.idade}}</td>
+        <td>{{cli.enderecoEmail}}</td>
+        <td>{{cli.numeroConta}}</td>
+        <td><button (click)="deleteCliente(cli.id)" class="btn btn-danger raised-btn">Delete</button>
+            <button (click)="updateCliente(cli.id)" class="btn btn-info raised-btn" style="margin-left: 10px">Atualizar</button>
+            <button (click)="clienteDetails(cli.id)" class="btn btn-info raised-btn" style="margin-left: 10px">Detalhes</button>
+
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>
+</body>
+</html>
+

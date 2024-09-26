@@ -1,0 +1,28 @@
+<h3 class="text-center mt-0">Atualizar Cliente</h3>
+<div class="form-container d-flex justify-content-center">
+  <div class="col-md-4">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control text-center" id="nome" required [(ngModel)]="cliente.nome" name="nome">
+      </div>
+      <div class="form-group">
+        <label for="idade">Idade</label>
+        <input type="text" class="form-control text-center" id="idade" required [(ngModel)]="cliente.idade" name="idade">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control text-center" id="email" required [(ngModel)]="cliente.enderecoEmail" name="email">
+      </div>
+      <div class="form-group">
+        <label for="numeroConta">Numero Conta</label>
+        <input type="text" class="form-control text-center" id="numeroConta" required [(ngModel)]="cliente.numeroConta" name="numeroConta">
+      </div>
+      <br/>
+      <button type="submit" class="btn btn-primary w-100">Atualizar</button>
+    </form>
+    <br/>
+  </div>
+</div>
+
+<app-footer class="mt-0"></app-footer>

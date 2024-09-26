@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Cadastrar Transação</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3 mt-3">
+      <label for="nome">Nome:</label>
+      <input type="nome" class="form-control" id="nome" required [(ngModel)]="transacao.nome"
+       name="nome">
+    </div>
+    <label for="tipoTransacao">Tipo de Transação</label>
+    <select id="tipoTransacao" required [(ngModel)]="transacao.tipoTransacao" name="tipoTransacao">
+      <option value="CREDITO">Crédito</option>
+      <option value="DEBITO">Débito</option>
+    </select>
+    <div class="mb-3 mt-3">
+      <label for="email">Valor:</label>
+      <input type="email" class="form-control" id="valor" required [(ngModel)]="transacao.valor" name="valor">
+    </div>
+    <div class="mb-3">
+      <label for="numeroConta">Número Conta:</label>
+      <input type="numeroConta" class="form-control" id="numeroConta" required [(ngModel)]="transacao.numeroConta"name="numeroConta">
+    </div>
+
+    <button type="submit"  class="btn btn-primary">Cadastrar</button>
+  </form>
+</div>
+<br/>
+<app-footer></app-footer>
+</body>
+</html>

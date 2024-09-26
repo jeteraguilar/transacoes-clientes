@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="container mt-3">
+
+  <table class="table  table-secondary table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Tipo Transação </th>
+        <th>Valor</th>
+        <th>Número Conta</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tra of transacoes">
+        <td>{{tra.id}}</td>
+        <td>{{tra.nome}}</td>
+        <td>{{ tra.tipoTransacao }}</td>
+        <td>{{ tra.valor | currency:'BRL' }}</td>
+        <td>{{tra.numeroConta}}</td>
+        <td><button (click)="deleteTransacao(tra.id)" class="btn btn-danger">Delete</button>
+            <button (click)="updateTransacao(tra.id)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
+        </td>
+      </tr>
+      <h3 class="text-right">Saldo Total: {{ calcularSaldoTotal() | currency:'BRL' }}</h3>
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>
+</body>
+</html>
+
